@@ -15,12 +15,11 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 90px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,6 +63,7 @@ body {
 
 
 /* launch menu hovering.  */
+
 .launch-menu{
 position: relative;
 }
@@ -129,7 +129,7 @@ display: block;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-left: 80px;
+  padding-left: 90px;
   padding-bottom: 120px;
 }
 
@@ -143,7 +143,7 @@ display: block;
 .page7 h1 {
   font-size: 52px;
   font-weight: 700;
-  max-width: 700px;
+  max-width: 800px;
 
   margin-bottom: 20px;
 }
@@ -156,12 +156,18 @@ display: block;
 .page6 p,
 .page7 p {
   max-width: 650px;
-
   line-height: 1.8;
-
   font-size: 16px;
-
   margin-bottom: 30px;
+}
+
+.page2,
+.page3,
+.page4,
+.page5,
+.page6,
+.page7{
+  min-height: 100vh;
 }
 
 /*BUTTONS */
@@ -170,17 +176,22 @@ display: block;
 .button3,
 .button4,
 .button5 {
-  width: 220px;
+  width: 150px;
   height: 55px;
   border: 2px solid white;
-  background: transparent;
+  background: rgb(123, 121, 121);
   color: white;
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.4s;
 }
+.page5 button{
+   width: 220px;
+}
+
 /* Adding background images to pages */
+
 .page6 {
   background-image: url("./images/Advancing_Human_Spaceflight_Desktop_61c8ba1c67.jpeg");
   background-position: center;
@@ -190,11 +201,12 @@ display: block;
 .page4{
     background-image: url("./images/launchingtower.jpg");
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
-
+    background-size:cover;
 }
+
 /* Adding background videos to pages */
+
 .page2, 
 .page3,
 .page5,
@@ -213,6 +225,7 @@ display: block;
 }
 
 /* Hovering effect on buttons  */
+
 .button2:hover,
 .button3:hover,
 .button4:hover,
@@ -221,6 +234,50 @@ display: block;
   color: black;
 }
 
+/* Centering Videos properly */
+
+.page2 video{
+     width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:scale(1.15);
+    filter:brightness(55%);
+}
+
+
+
+/* Aligning texts properly  */
+.page3{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page4{
+   display:flex;
+   flex-direction:column;
+   text-align:left;
+   justify-content:left;
+   padding-left:60%;
+   padding-top:60px;
+}
+
+.page5{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    padding-top:80px;
+    padding-left:40px;
+    box-sizing:border-box;
+}
+
+.page6{
+  display:flex;
+   flex-direction:column;
+   justify-content:left;
+   padding-left:60%;
+   padding-top:80px;
+}
 /* TIMER */
 
 .time {
@@ -228,16 +285,19 @@ display: block;
   margin-bottom: 15px;
   font-weight: 600;
 }
-
-
+/* dark overlay for better text visibility on videos. */
+.background-video{
+    filter: brightness(48%);
+}
 /* FOOTER */
+
 #footer{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: rgb(0, 0, 0);
+    background-color:black;
     border-top: none;
 }
 
@@ -267,7 +327,7 @@ display: block;
     font-size: 12px;
 }
 
-/* RESPONSIVE */
+/* Trying responsive design */
 
 @media (max-width: 1200px) {
   .lists {
@@ -332,4 +392,3 @@ display: block;
     justify-content: center;
   }
 }
-
