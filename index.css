@@ -24,20 +24,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 50px;
-
   z-index: 100;
   background: transparent;
 }
 
 .logo {
   width: 200px;
-
-  cursor: pointer;
-  background-color:white;
-  color:white;
-  
+  cursor: pointer;  
 }
 
 /* NAVIGATION */
@@ -80,7 +74,7 @@ position: absolute;
 top: 50px;
 left: 0;
 width: 220px;
-background-color: black;
+background-color: transparent;
 border: 1px solid white;
 display: none;
 }
@@ -132,17 +126,11 @@ display: block;
 .page6,
 .page7 {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   padding-left: 80px;
   padding-bottom: 120px;
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 /* HEADINGS */
@@ -184,28 +172,47 @@ display: block;
 .button5 {
   width: 220px;
   height: 55px;
-
   border: 2px solid white;
   background: transparent;
-
   color: white;
-
   font-weight: bold;
   letter-spacing: 1px;
-
   cursor: pointer;
-
   transition: 0.4s;
-
 }
 /* Adding background images to pages */
 .page6 {
   background-image: url("./images/Advancing_Human_Spaceflight_Desktop_61c8ba1c67.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.page3{
-    background-image: url("./images/crew_12_MOBILE_template1_f0071d661e.jpeg");
+.page4{
+    background-image: url("./images/launchingtower.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+/* Adding background videos to pages */
+.page2, 
+.page3,
+.page5,
+.page7{
+    position: relative;
+    overflow: hidden;
+}
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
+/* Hovering effect on buttons  */
 .button2:hover,
 .button3:hover,
 .button4:hover,
@@ -224,41 +231,40 @@ display: block;
 
 
 /* FOOTER */
-
-.footer {
-  background: black;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-
-  padding: 40px;
+#footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgb(0, 0, 0);
+    border-top: none;
 }
 
-.logo2 {
-  width: 40px;
+.logo2{
+    width: 30px;
+    height:30px;
+    background-color: grey;
+    color:grey; 
+    border-radius: 50%;
+}
+.footerlists{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.footerlists li{
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+.footerlists li:hover{
+  color:grey;
 }
 
-.footerlists {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.footerlists li {
-  font-size: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.footerlists li:hover {
-  color: #999;
-}
-
-.footer p {
-  font-size: 12px;
-  color: #999;
+#footer p{
+    color: white;
+    font-size: 12px;
 }
 
 /* RESPONSIVE */
@@ -317,7 +323,7 @@ display: block;
     font-size: 14px;
   }
 
-  .footer {
+  #footer {
     flex-direction: column;
   }
 
