@@ -278,6 +278,8 @@ display: block;
    padding-left:60%;
    padding-top:80px;
 }
+
+
 /* TIMER */
 
 .time {
@@ -285,10 +287,13 @@ display: block;
   margin-bottom: 15px;
   font-weight: 600;
 }
+
 /* dark overlay for better text visibility on videos. */
 .background-video{
     filter: brightness(48%);
 }
+
+
 /* FOOTER */
 
 #footer{
