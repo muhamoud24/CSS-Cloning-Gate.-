@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: black;
+  color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 50px;
+
+  z-index: 100;
+  background: transparent;
+}
+
+.logo {
+  width: 200px;
+
+  cursor: pointer;
+  background-color:white;
+  color:white;
+  
+}
+
+/* NAVIGATION */
+
+.lists,
+.lists2 {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.lists li,
+.lists2 li {
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lists li:hover,
+.lists2 li:hover {
+  color: #cccccc;
+}
+
+.lists a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* launch menu hovering.  */
+.launch-menu{
+position: relative;
+}
+
+.lists2{
+list-style: none;
+position: absolute;
+top: 50px;
+left: 0;
+width: 220px;
+background-color: black;
+border: 1px solid white;
+display: none;
+}
+
+.lists2 li{
+padding: 15px;
+font-size: 12px;
+}
+
+/* .launch-menu .lists2{
+display:hidden;
+} */
+.launch-menu:hover .lists2{
+display: block;
+}
+
+/* TOP BUTTON */
+
+.button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+
+  padding: 10px 20px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: white;
+  color: black;
+}
+
+/* MAIN */
+
+.main {
+  width: 100%;
+}
+
+/* ALL PAGES */
+
+.page2,
+.page3,
+.page4,
+.page5,
+.page6,
+.page7 {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding-left: 80px;
+  padding-bottom: 120px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* HEADINGS */
+
+.page2 h1,
+.page3 h1,
+.page4 h1,
+.page5 h1,
+.page6 h1,
+.page7 h1 {
+  font-size: 52px;
+  font-weight: 700;
+  max-width: 700px;
+
+  margin-bottom: 20px;
+}
+
+/* PARAGRAPHS */
+
+.page3 p,
+.page4 p,
+.page5 p,
+.page6 p,
+.page7 p {
+  max-width: 650px;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+
+  margin-bottom: 30px;
+}
+
+/*BUTTONS */
+
+.button2,
+.button3,
+.button4,
+.button5 {
+  width: 220px;
+  height: 55px;
+
+  border: 2px solid white;
+  background: transparent;
+
+  color: white;
+
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+
+}
+/* Adding background images to pages */
+.page6 {
+  background-image: url("./images/Advancing_Human_Spaceflight_Desktop_61c8ba1c67.jpeg");
+}
+.page3{
+    background-image: url("./images/crew_12_MOBILE_template1_f0071d661e.jpeg");
+}
+
+.button2:hover,
+.button3:hover,
+.button4:hover,
+.button5:hover {
+  background: white;
+  color: black;
+}
+
+/* TIMER */
+
+.time {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  padding: 40px;
+}
+
+.logo2 {
+  width: 40px;
+}
+
+.footerlists {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.footerlists li {
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footerlists li:hover {
+  color: #999;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #999;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .lists {
+    display: none;
+  }
+
+  .page2,
+  .page3,
+  .page4,
+  .page5,
+  .page6,
+  .page7 {
+    padding-left: 40px;
+  }
+
+  .page2 h1,
+  .page3 h1,
+  .page4 h1,
+  .page5 h1,
+  .page6 h1,
+  .page7 h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .lists2 {
+    display: none;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .page2 h1,
+  .page3 h1,
+  .page4 h1,
+  .page5 h1,
+  .page6 h1,
+  .page7 h1 {
+    font-size: 32px;
+  }
+
+  .page3 p,
+  .page4 p,
+  .page5 p,
+  .page6 p,
+  .page7 p {
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footerlists {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
